@@ -102,9 +102,6 @@ require "header.php";
         ?>
     </div>
 
-    <script>
-        
-    </script>
 </body>
 
 <?php

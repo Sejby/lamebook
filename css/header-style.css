@@ -19,16 +19,16 @@ header::after {
 }
 
 #logo {
+    padding: 15px 0 0 40px;
+    margin: 0;
     float: left;
-    padding-left: 40px;
-    padding-top: 0;
     font-size: 26px;
     font-family: 'Klavika', sans-serif;
     font-weight: bold;
     color: black;
 }
 
-#login-button{
+#login-button {
     border-radius: 5px;
     font-weight: bold;
 }
@@ -37,12 +37,11 @@ header::after {
     text-decoration: underline;
 }
 
-#nastaveni-button{
+#nastaveni-button {
     font-weight: bold;
     border: 1px solid #CDCFD1;
     color: #1A1A1B;
     background: #CDCFD1;
-
 }
 
 form {
