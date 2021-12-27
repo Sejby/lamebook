@@ -156,15 +156,13 @@ h1 {
     padding: 0;
     margin: 0;
     overflow: auto;
+    border-bottom: 1px solid #E0E3EB;
 }
 
 .stockDiv {
     float: left;
-    margin: 0;
-    padding: 0;
+    padding: 10px;
+    border-right: 1px solid #E0E3EB;
     width: 20%;
-    border: 1px solid black;
     height: 100%;
-    padding: 0;
-    margin: 0;
 }
