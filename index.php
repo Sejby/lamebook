@@ -22,7 +22,7 @@ require "header.php";
 
 <body>
     <div id="stocks">
-        <div class="stockDiv"><p>Stock</p></div>
+        <div class="stockDiv"><strong id="BTCstock">BTC</strong></div>
         <div class="stockDiv"><p>Stock</p></div>
         <div class="stockDiv"><p>Stock</p></div>
         <div class="stockDiv"><p>Stock</p></div>
@@ -102,6 +102,9 @@ require "header.php";
         ?>
     </div>
 
+    <?php
+        require('stocks.php');
+    ?>
 </body>
 
 <?php
