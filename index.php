@@ -33,6 +33,10 @@ require "header.php";
     <div id="content">
         <?php
 
+        include "./stocks.php";
+        $stock = new StockAPI();
+        $stock->getAPI();
+        
         if (isset($_SESSION['userId'])) {
 
             echo '<div id="pridaniPrispevku">
@@ -101,10 +105,6 @@ require "header.php";
 
         ?>
     </div>
-
-    <?php
-        require('stocks.php');
-    ?>
 </body>
 
 <?php
