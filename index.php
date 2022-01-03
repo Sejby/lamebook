@@ -33,8 +33,8 @@ require "header.php";
     <div id="content">
         <?php
 
-        include "./stocks.php";
-        $stock = new StockAPI();
+        require "./stocks.php";
+        $stock = new StockAPI;
         $stock->getAPI();
         
         if (isset($_SESSION['userId'])) {
