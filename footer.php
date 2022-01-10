@@ -4,7 +4,7 @@
         <footer>
             <div id="textvefooteru">
                 <p>
-                    &copy; Jan Schejbal 2021, All Rights Reserved.
+                    &copy; Jan Schejbal 2022, All Rights Reserved.
                 </p>
             </div>
         </footer>

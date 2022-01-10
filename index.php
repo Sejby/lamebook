@@ -5,7 +5,9 @@ require "header.php";
 <head>
     <link rel="stylesheet" href="css/main-style.css">
     <link rel="shortcut icon" type="image/png" href="obrazky/favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b893199397.js" crossorigin="anonymous"></script>
 
@@ -14,7 +16,6 @@ require "header.php";
         $alert = "Nesprávné heslo!";
         echo "<script type='text/javascript'>alert('$alert');</script>";
     }
-
     ?>
 
 </head>
@@ -23,10 +24,18 @@ require "header.php";
 <body>
     <div id="stocks">
         <div class="stockDiv"><strong id="BTCstock">BTC</strong></div>
-        <div class="stockDiv"><p>Stock</p></div>
-        <div class="stockDiv"><p>Stock</p></div>
-        <div class="stockDiv"><p>Stock</p></div>
-        <div class="stockDiv"><p>Stock</p></div>
+        <div class="stockDiv">
+            <p>Stock</p>
+        </div>
+        <div class="stockDiv">
+            <p>Stock</p>
+        </div>
+        <div class="stockDiv">
+            <p>Stock</p>
+        </div>
+        <div class="stockDiv">
+            <p>Stock</p>
+        </div>
     </div>
 
 
@@ -36,7 +45,7 @@ require "header.php";
         require "./stocks.php";
         $stock = new StockAPI;
         $stock->getAPI();
-        
+
         if (isset($_SESSION['userId'])) {
 
             echo '<div id="pridaniPrispevkuTlacitko">

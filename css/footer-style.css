@@ -1,13 +1,13 @@
 #paticka {
-    color: white;
+    color: black;
     text-align: justify;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 footer {
     text-align: right;
     padding-top: 50px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     padding-right: 10px;
 }
 
