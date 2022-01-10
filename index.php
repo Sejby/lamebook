@@ -39,7 +39,7 @@ require "header.php";
         
         if (isset($_SESSION['userId'])) {
 
-            echo '<div id="pridaniPrispevku">
+            echo '<div id="pridaniPrispevkuTlacitko">
                   <h3 id="pridejsvujnapad">Co se vám honí hlavou?</h3><a href="addpost.php"><button class="btn btn-success" id="tlacitkopridani">Přidat Příspěvek</button></a>
                   </div>';
         } else {
