@@ -2,12 +2,13 @@ body{
     margin: 0;
     padding: 0;
     background-image: url("../obrazky/signup-image.jpg");
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     text-align: center;
+    background-size: cover;
 }
 
 #registrdiv{
-    background-color: black;
+    background-color: #6adcff;
     padding: 50px;
     margin-top: 12%;
     width: 18%;
