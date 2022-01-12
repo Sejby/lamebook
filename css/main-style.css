@@ -3,11 +3,15 @@ body {
   font-family: "Noto Sans", "Jost";
   margin: 0;
   padding: 0;
-  color: black;
+  color: blacks;
   background-color: white;
   height: 100%;
   width: 100%;
   scroll-behavior: smooth;
+  background-image: url('../obrazky/stonks.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1 {
@@ -107,7 +111,7 @@ h1 {
 
 #info-warning{
     font-size: 20px;
-    padding: 5px 0 0 5px;
+    padding: 8px 0 0 15px;
 }
 
 #tlacitkopridani{
@@ -174,6 +178,7 @@ h1 {
 }
 
 .stockDiv {
+  background-color: lightgrey;
   float: left;
   padding: 10px;
   border-right: 1px solid #e0e3eb;

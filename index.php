@@ -16,6 +16,11 @@ require "header.php";
         $alert = "Nesprávné heslo!";
         echo "<script type='text/javascript'>alert('$alert');</script>";
     }
+
+    if (isset($_GET["error"]) && $_GET["error"] == "likecannotbeadded") {
+        $alert = "Pro přidání liku se musíte nejdříve přihlásit.";
+        echo "<script type='text/javascript'>alert('$alert');</script>";
+    }
     ?>
 
 </head>
@@ -58,7 +63,7 @@ require "header.php";
         }
 
         $mysqli = new mysqli('localhost', 'root', '', 'lamebook_database');
-        $sql = "SELECT idPosts, date, user, topic, postText, likes FROM posty";
+        $sql = "SELECT idPosts, date, user, topic, postText, likes FROM posty ORDER BY date DESC;";
         if ($stmt = $mysqli->prepare($sql)) {
             if ($stmt->execute()) {
                 $stmt->store_result();
@@ -74,6 +79,14 @@ require "header.php";
                             <form action="includes/addlike.inc.php" method="post"><button type="submit" value=' . $id . ' name="addlike"><i class="fas fa-thumbs-up like"></i> </button> </form> <h3>' . $likes . '</h3>
                             <form action="includes/adddislike.inc.php" method="post"> <button type="submit" value=' . $id . ' name="adddislike"> <i class="fas fa-thumbs-down dislike"></i> </button> </form>
                             </div>  ';
+                        }
+                        else{
+                            echo'
+                            <div class="vote-button">
+                            <form action="includes/likecannotbeadded.php" method="post"><button type="submit" value=' . $id . ' name="riplike"><i class="fas fa-thumbs-up like"></i> </button> </form> <h3>' . $likes . '</h3>
+                            <form action="includes/likecannotbeadded.php" method="post"><button type="submit" value=' . $id . ' name="riplike"> <i class="fas fa-thumbs-down dislike"></i> </button> </form>
+                            </div>';
+
                         }
 
                         echo '<div class="content">';
