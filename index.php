@@ -1,5 +1,5 @@
 <?php
-    require "header.php";
+require "header.php";
 ?>
 
 <head>
@@ -28,18 +28,20 @@
 
 <body>
     <div id="stocks">
-        <div class="stockDiv"><strong id="BTCstock">BTC</strong></div>
         <div class="stockDiv">
-            <p>Stock</p>
+            <p>BTC</p>
         </div>
         <div class="stockDiv">
-            <p>Stock</p>
+            <p>ETH</p>
         </div>
         <div class="stockDiv">
-            <p>Stock</p>
+            <p>USD</p>
         </div>
         <div class="stockDiv">
-            <p>Stock</p>
+            <p>CZK</p>
+        </div>
+        <div class="stockDiv">
+            <p>AAPL</p>
         </div>
     </div>
 
@@ -62,7 +64,7 @@
                   </div>';
         }
 
-        $mysqli = new mysqli('localhost', 'root', '', 'lamebook_database');
+        $mysqli = new mysqli('localhost', 'root', '', 'ezstonks');
         $sql = "SELECT idPosts, date, user, topic, postText, likes FROM posty ORDER BY date DESC;";
         if ($stmt = $mysqli->prepare($sql)) {
             if ($stmt->execute()) {
@@ -79,14 +81,12 @@
                             <form action="includes/addlike.inc.php" method="post"><button type="submit" value=' . $id . ' name="addlike"><i class="fas fa-thumbs-up like"></i> </button> </form> <h3>' . $likes . '</h3>
                             <form action="includes/adddislike.inc.php" method="post"> <button type="submit" value=' . $id . ' name="adddislike"> <i class="fas fa-thumbs-down dislike"></i> </button> </form>
                             </div>  ';
-                        }
-                        else{
-                            echo'
+                        } else {
+                            echo '
                             <div class="vote-button">
                             <form action="includes/likecannotbeadded.php" method="post"><button type="submit" value=' . $id . ' name="riplike"><i class="fas fa-thumbs-up like"></i> </button> </form> <h3>' . $likes . '</h3>
                             <form action="includes/likecannotbeadded.php" method="post"><button type="submit" value=' . $id . ' name="riplike"> <i class="fas fa-thumbs-down dislike"></i> </button> </form>
                             </div>';
-
                         }
 
                         echo '<div class="content">';
