@@ -1,9 +1,10 @@
 body{
     margin: 0;
     padding: 0;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../obrazky/signup-image.jpg");
+    font-family: 'Noto Sans', sans-serif;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
-    background-image: url("../obrazky/signup-image.jpg");
+    background-size: cover;
 }
 
 #addpostdiv{

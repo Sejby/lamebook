@@ -1,14 +1,14 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url("../obrazky/signup-image.jpg");
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../obrazky/signup-image.jpg");
     font-family: 'Noto Sans', sans-serif;
     text-align: center;
     background-size: cover;
 }
 
 #registrdiv{
-    background-color: #6adcff;
+    background-color: rgba(0, 0, 0, 0.9);
     padding: 50px;
     margin-top: 12%;
     width: 18%;
